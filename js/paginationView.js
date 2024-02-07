@@ -1,4 +1,4 @@
-import View from "./View.js";
+import View from "./view.js";
 import { state } from "./model.js";
 
 class PaginationView extends View {
