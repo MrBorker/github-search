@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./assets/png/favicon.png" />
+    <script type="module" src="./js/controller.js"></script>
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <main class="main">
+      <section class="search">
+        <div class="logo">
+          <svg
+            width="150"
+            height="150"
+            viewBox="0 0 150 150"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <rect width="150" height="150" fill="url(#pattern0)" />
+            <defs>
+              <pattern
+                id="pattern0"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <use xlink:href="#image0_4_348" transform="scale(0.005)" />
+              </pattern>
+              <image
+                id="image0_4_348"
+                width="200"
+                height="200"
+                xlink:href="data:image/png;base64,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"
+              />
+            </defs>
+          </svg>
+        </div>
+        <h1 class="search__title">Let's search</h1>
+        <form class="search__form" action="">
+          <select class="search__form-select" name="" id="">
+            <option value="repositories">Repositories</option>
+            <option value="users">Users</option>
+          </select>
+          <input class="search__form-input" type="text" placeholder="Search" />
+          <button class="search__form-btn" type="submit">Submit</button>
+        </form>
+      </section>
+      <section class="results hidden">
+        <nav class="results__nav results__nav-prev"></nav>
+        <div class="results__container"></div>
+        <nav class="results__nav results__nav-next"></nav>
+      </section>
+    </main>
+    <template id="result__template">
+      <div class="result__card">
+        <div class="result__card-content">
+          <div class="result__card-img-wrapper">
+            <img
+              class="result__card-img"
+              src=""
+              onerror="this.onerror=null;this.src='./assets/png/grogu.png'"
+              alt="User's profile picture"
+            />
+          </div>
+          <h3 class="result__card-name">Name</h3>
+          <div class="result__card-info">
+            <div>
+              <span class="result__card-title"></span>
+              <span class="result__card-value"></span>
+            </div>
+            <div>
+              <span class="result__card-title"></span>
+              <span class="result__card-value"></span>
+            </div>
+          </div>
+          <a href="" class="result__card-link">View</a>
+        </div>
+      </div>
+    </template>
+    <template id="nav__template"
+      ><button class="results__nav-btn" data-goto="">
+        <img class="results__nav-icon" src="" alt="" /></button
+    ></template>
+    <template id="loader">
+      <?xml version="1.0" encoding="UTF-8" standalone="no"?><svg
+        class="loader"
+        xmlns:svg="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.0"
+        width="256px"
+        height="256px"
+        viewBox="0 0 128 128"
+        xml:space="preserve"
+      >
+        <g>
+          <path
+            d="M88.63 14.92c5.97.1 5.57.83 5.55.8-7.6 5.3-20.67 1.82-20.7 2.3 0 .08-.8 1.7-4.27 2.3a25.78 25.78 0 0 1-3.2.4l-1.4.06q-.3 0-.6.02t-.5 0a18.9 18.9 0 0 1-2.3-.06c3.2-.64 4.6-2.96 4.4-3.05-8.3.1-13.6-2-20.4-1.3-5.8.7-8.9 7-11.8 10.2l-1-16.6c2.1 2 9.1 2.3 12.8 1.6C48.8 10.8 62 5 68.5 5.4c.85-.06-3.6-4.6-3.55-4.5 8-.07 10.4 4.35 10.47 4.36a38.56 38.56 0 0 1 14.1 5.1c1.84 1.1 3.4 2.1 4.4 2.85l1.2.9.3.3.05.1c-4.67-.5-7.03.4-6.83.4zm-18.2 4.58c2.1-.76 1.9-2.02 1.9-2a3.2 3.2 0 0 1-2 1.7 23.66 23.66 0 0 1-3.63 1.05 16.07 16.07 0 0 0 3.74-.75zm-3.98.1a11.63 11.63 0 0 0 2.7-.53c1.53-.55 1.37-1.46 1.37-1.45a2.32 2.32 0 0 1-1.44 1.23 17.12 17.12 0 0 1-2.63.76zm6.3-15.8c-1.47-1.67-5.9-2.16-5.88-2.15a16.36 16.36 0 0 1 4.4 1.6 9.18 9.18 0 0 1 2.56 2.13s.08-.23-1.1-1.57zm2.28 8.66c0 4.58 2.57 5.05 2.55 5.03a6.6 6.6 0 0 1-1.9-5.1 8.37 8.37 0 0 1 2.65-5.3 6.24 6.24 0 0 0-3.3 5.3zm9.76-3.32A2.87 2.87 0 1 0 87.6 12a2.87 2.87 0 0 0-2.87-2.86zm-1.1 3.47a1.8 1.8 0 0 0 1.5 1.8 2.42 2.42 0 1 1 2-2.4v.1a1.8 1.8 0 0 0-3.5.5zm-13-9.1a7.08 7.08 0 0 0-3.1-1 5.72 5.72 0 0 1 2.8 1.3 8.3 8.3 0 0 1 1.8 1.8 5.95 5.95 0 0 0-1.7-2.1zm-32.4 14c-2 1.1-3.5 5.2-3.5 5.2a16.36 16.36 0 0 1 2.6-3.8 9.18 9.18 0 0 1 2.6-2s-.2-.1-1.8.7zm-.5-1.3c-1.9.6-3.9 3.9-3.9 3.9a14.22 14.22 0 0 1 2.8-2.9 7.98 7.98 0 0 1 2.6-1.2s-.2-.2-1.6.3zm-1.5-1.6a3.8 3.8 0 0 0-2.4 2.1 7.2 7.2 0 0 1 2.5-1.7 7.1 7.1 0 0 1 3-.3 4.7 4.7 0 0 0-3.1 0zm-1-1.1a3.6 3.6 0 0 1-2.1-1.3 6.64 6.64 0 0 0 2.3 1 15.1 15.1 0 0 0 3.1.3 9.96 9.96 0 0 1-3.3.1zm58.3 96.2c-3.1 5.1-3.5 4.4-3.5 4.4-.8-9.2 8.7-18.8 8.3-19.1-.1 0-1.1-1.5.1-4.8a25.8 25.8 0 0 1 1.3-3l.6-1.2.3-.5.23-.5a18.96 18.96 0 0 1 1.2-1.9c-1.07 3.1.26 5.5.44 5.3 4.1-7.3 8.5-10.8 11.3-17 2.3-5.4-1.6-11.3-2.9-15.3l14.8 7.5c-2.76.8-6.5 6.7-7.8 10.3-1.15 3.64-2.68 18-6.27 23.4-.4.77 5.8-.83 5.66-.82-3.9 7-8.9 6.86-9 6.9a38.56 38.56 0 0 1-11.5 9.7c-1.8 1.06-3.5 1.86-4.7 2.4l-1.3.6-.4.1c-.03 0-.06 0-.1.03 2.8-3.8 3.2-6.3 3.1-6.1zm5.1-18c-.4 2.2.8 2.7.8 2.7a3.2 3.2 0 0 1-.5-2.6 23.62 23.62 0 0 1 .9-3.6 16.06 16.06 0 0 0-1.2 3.6zm1.9-3.5a11.6 11.6 0 0 0-.9 2.6c-.3 1.6.6 1.9.6 1.9a2.33 2.33 0 0 1-.4-1.8 17.04 17.04 0 0 1 .6-2.7zm10.5 13.4c2.2-.4 4.8-4 4.8-4a16.36 16.36 0 0 1-3.6 3 9.16 9.16 0 0 1-3.2 1.2s.2.2 1.9-.1zm-8.7-2.3c-3.9-2.3-5.6-.3-5.6-.3a6.6 6.6 0 0 1 5.3.9 8.37 8.37 0 0 1 3.2 5 6.24 6.24 0 0 0-2.98-5.5zm-2 10.1a2.87 2.87 0 1 0-3.9 1.1 2.87 2.87 0 0 0 3.9-1zm-2.4-2.6a1.8 1.8 0 0 0-2.3.5 2.45 2.45 0 0 1 .2-.4 2.42 2.42 0 1 1 .9 3.3 1.8 1.8 0 0 0 1.3-3.3zm14.4-6.6a7.08 7.08 0 0 0 2.4-2.1 5.72 5.72 0 0 1-2.5 1.8 8.27 8.27 0 0 1-2.5.7 5.94 5.94 0 0 0 2.6-.33zm4-35.02c.1-2.22-2.7-5.62-2.7-5.6a16.37 16.37 0 0 1 2.04 4.2 9.16 9.16 0 0 1 .37 3.3s.2-.1.3-1.9zm1.4.27c.5-1.9-1.4-5.3-1.4-5.3a14.2 14.2 0 0 1 1.1 3.9 7.97 7.97 0 0 1-.2 2.9s.2-.1.54-1.6zm2.1-.5a3.78 3.78 0 0 0-.53-3.17 7.2 7.2 0 0 1 .2 3 7.1 7.1 0 0 1-1.2 2.76 4.7 4.7 0 0 0 1.5-2.6zm1.46-.37a3.6 3.6 0 0 1 2.2-1.16 6.63 6.63 0 0 0-2.04 1.5 15.14 15.14 0 0 0-1.76 2.6 9.98 9.98 0 0 1 1.6-2.9zM9.12 66.8c-2.9-5.24-2.04-5.25-2.1-5.22 8.4 3.93 11.9 17 12.3 16.78.1-.03 1.9-.15 4.18 2.54a25.78 25.78 0 0 1 2 2.65c.3.4.6.8.8 1.18q.2.27.3.53t.3.5a18.9 18.9 0 0 1 1.1 2c-2.12-2.46-4.8-2.48-4.8-2.26 4.34 7.2 5.1 12.78 9.1 18.3 3.6 4.68 10.6 4.24 14.8 5.14.1-.05-13.92 9.1-13.9 9.08.68-2.8-2.54-9-5-11.9-2.6-2.8-14.26-11.3-17.12-17.12-.47-.72-2.2 5.44-2.12 5.32-4.1-6.92-1.47-11.2-1.5-11.24a38.56 38.56 0 0 1-2.56-14.8c0-2.15.12-3.98.25-5.26l.12-1.48.06-.38.03-.1h.02c1.87 4.32 3.86 5.9 3.74 5.74zM22.2 80.25c-1.7-1.43-2.7-.62-2.68-.62a3.2 3.2 0 0 1 2.47.87 23.66 23.66 0 0 1 2.7 2.62 16.08 16.08 0 0 0-2.5-2.87zm2.1 3.4a11.62 11.62 0 0 0-1.84-2.07c-1.3-1.04-2-.45-2-.45a2.32 2.32 0 0 1 1.8.63 17.1 17.1 0 0 1 2 1.9zM7.48 86.13c-.74 2.1 1.05 6.18 1.05 6.17a16.36 16.36 0 0 1-.82-4.6 9.18 9.18 0 0 1 .6-3.3s-.2.05-.8 1.73zm6.33-6.3c4-2.3 3.1-4.76 3.1-4.74a6.6 6.6 0 0 1-3.4 4.1 8.37 8.37 0 0 1-5.9.3 6.24 6.24 0 0 0 6.3.2zm-7.7-6.8a2.87 2.87 0 1 0 1-3.93 2.87 2.87 0 0 0-1 3.93zm3.6-.8a1.8 1.8 0 0 0 .7-2.23 2.42 2.42 0 1 1-3-.5l.1-.08a1.8 1.8 0 0 0 2.2 2.8zm-1.5 15.8a7.08 7.08 0 0 0 .7 3.13 5.72 5.72 0 0 1-.3-3.07 8.3 8.3 0 0 1 .7-2.6 5.95 5.95 0 0 0-1 2.4zm28.4 21c1.9 1.22 6.3.44 6.3.45a16.4 16.4 0 0 1-4.6-.3 9.2 9.2 0 0 1-3-1.33s0 .24 1.5 1.2zm-.9 1.08c1.4 1.4 5.3 1.4 5.3 1.4a14.2 14.2 0 0 1-3.9-1 7.97 7.97 0 0 1-2.4-1.6s0 .2 1.1 1.3zm-.6 2.1a3.8 3.8 0 0 0 3 1.1 7.2 7.2 0 0 1-2.7-1.3 7.1 7.1 0 0 1-1.8-2.4 4.7 4.7 0 0 0 1.6 2.7zm-.4 1.5a3.6 3.6 0 0 1-.1 2.5 6.63 6.63 0 0 0-.3-2.5 15.1 15.1 0 0 0-1.3-2.8 9.97 9.97 0 0 1 1.7 2.9z"
+            fill="#fefefe"
+          />
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 64 64"
+            to="120 64 64"
+            dur="960ms"
+            repeatCount="indefinite"
+          ></animateTransform>
+        </g></svg
+    ></template>
+    <template id="error"
+      ><div class="error__backdrop">
+        <div class="error__container">
+          <img class="error__img" src="./assets/png/error-shark.png" alt="" />
+          <p class="error__title">Request limit reached!</p>
+          <span class="error__note">please, wait a minute and try again</span>
+          <button class="error__btn">OK</button>
+        </div>
+      </div></template
+    >
+    <footer class="footer"></footer>
+  </body>
+</html>
