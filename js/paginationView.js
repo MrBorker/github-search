@@ -14,7 +14,6 @@ class PaginationView extends View {
 
     // Page 1, there are other pages
     if (curPage === 1 && numPages > 1) {
-      // рендер правой кнопки
       this.clear(this.navNext);
       this.clear(this.navPrev);
       this.navNext.append(this.renderNavBtn("next"));
@@ -23,7 +22,6 @@ class PaginationView extends View {
 
     // Last page
     if (curPage === numPages && numPages > 1) {
-      // рендер левой кнопки
       this.clear(this.navNext);
       this.clear(this.navPrev);
       this.navPrev.append(this.renderNavBtn("prev"));
@@ -32,7 +30,6 @@ class PaginationView extends View {
 
     // Middle page
     if (curPage < numPages) {
-      // рендер обеих кнопок
       this.clear(this.navNext);
       this.clear(this.navPrev);
       this.navNext.append(this.renderNavBtn("next"));

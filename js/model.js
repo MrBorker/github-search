@@ -1,5 +1,3 @@
-import { RESULTS_PER_PAGE } from "./config.js";
-
 export const state = {
   results: [],
   pagination: {
@@ -24,7 +22,7 @@ export const getJSON = async function (url) {
 
 export const loadQuery = async function (url) {
   try {
-    const query = await getJSON(url); // массив объектов
+    const query = await getJSON(url);
     const results = query.items;
     state.pagination.totalResults = query.total_count;
     results.map((result) => {

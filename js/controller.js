@@ -50,7 +50,6 @@ const init = function () {
       ).matches && 6;
     const forthCase =
       window.matchMedia("screen and (min-width: 1429px)").matches && 8;
-    // const breakpoints = { 1600: 6, 1024: 4, 768: 2, 576: 1 };
     model.state.pagination.resultsPerPage =
       firstCase || secondCase || thirdCase || forthCase;
     searchView.render(model.getResultsPage());
