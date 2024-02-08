@@ -31,9 +31,6 @@ html {
 
 body {
   font-family: "Raleway";
-  background-image: url(../assets/jpg/hero.jpg);
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 button {
@@ -64,10 +61,14 @@ a {
 .main {
   position: relative;
   z-index: 1;
+  background-image: url(../assets/jpg/hero.jpg);
+  background-size: cover;
 }
 
 .select {
   min-height: 62px;
+  padding: 25px 32px;
+  appearance: none;
 }
 
 /* ========================================================== */
