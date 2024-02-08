@@ -98,6 +98,7 @@ a {
 }
 
 .search__form-select {
+  min-height: 290px;
   font-family: "Raleway";
   font-weight: 300;
   font-size: 24px;
@@ -111,6 +112,7 @@ a {
 }
 
 .search__form-input {
+  min-height: 290px;
   width: 100%;
   font-family: "Raleway";
   font-weight: 300;
