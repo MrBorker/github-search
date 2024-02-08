@@ -125,6 +125,7 @@ a {
   color: var(--color-white);
   background-color: var(--color-settle-blue);
   backdrop-filter: blur(3px);
+  appearance: none;
 }
 
 .search__form-input::placeholder {
