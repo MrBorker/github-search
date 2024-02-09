@@ -66,15 +66,9 @@ a {
 .bg-image {
   width: 100%;
   position: fixed;
-  /* height: 100vh; */
-  height: 100dvh;
+  height: 100%;
+  /* height: 100dvh; */
   object-fit: cover;
-}
-
-.select {
-  min-height: 62px;
-  padding: 25px 32px;
-  appearance: none;
 }
 
 /* ========================================================== */
